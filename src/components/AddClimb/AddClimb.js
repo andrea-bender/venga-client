@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import ClimbsContext from '../ClimbsContext';
-import config from '../config';
+import { Link } from 'react-router-dom';
+import ClimbsContext from '../../contexts/ClimbsContext';
+import config from '../../config';
 import './AddClimb.css';
 
 const Required = () => (
@@ -27,7 +28,6 @@ export default class AddClimb extends Component {
       grade: grade.value,
       rating: rating.value
     };
-
     fetch(`${config.API_ENDPOINT}/climbs`, {
       method: 'POST',
       body: JSON.stringify(newClimb),
@@ -47,9 +47,9 @@ export default class AddClimb extends Component {
       description.value = ''
       type.value = ''
       grade.value = ''
-      rating.value = 0
+      rating.value = ''
       this.context.AddClimb(data)
-      this.props.history.push('/')
+      this.props.history.push('/climbs')
     })
     .catch(error => {
       this.setState({error})
@@ -60,6 +60,16 @@ export default class AddClimb extends Component {
   render() {
     return(
       <section className='AddClimb'>
+        <div className='add-climb-top'>
+        <Link className="logo-img" to="/">
+          <img
+                className="logo-img"
+                src={require('../../assets/logo1.png')}
+                alt={'venga logo'}
+                width={'200px'}
+            />
+            </Link>
+        </div>
         <h3> Add a new climb! </h3>
         
         <form
@@ -73,22 +83,20 @@ export default class AddClimb extends Component {
 
           <div>
             <label htmlFor="Location">Location: {' '} <Required /></label> <br />
-            <input type="text" id="location" name="location" required />
+            <input type="text" id="location" name="location" placeholder="Where is it located"required />
           </div>
 
-          <div>
-            <label htmlFor="Description"> Description: {' '} <Required /></label> <br />
-            <textarea id="description" name="description" rows="6" cols="45" required></textarea>
-          </div>
+          
 
           <div>
             <label htmlFor="Grade">Grade: {' '} <Required /></label> <br />
-            <input type="text" id="grade" name="grade" required />
+            <input type="text" id="grade" name="grade" placeholder="Difficulty"required />
           </div>
 
           <div>
-            <label for="type">Type</label>
+            <label htmlFor="type">Type:</label>
               <select id="type">
+                <option value='0'>Select Type</option>
                 <option value="Boulder">Boulder</option>
                 <option value="Sport">Sport</option>
                 <option value="Traditional">Traditional</option>
@@ -96,42 +104,25 @@ export default class AddClimb extends Component {
                 <option value="Other">Other</option>
               </select>
           </div>
-
-          <div className='rating'>
-            <label>
-              <input type="radio" name="stars" value="1" />
-              <span class="icon">★</span>
-            </label>
-            <label>
-              <input type="radio" name="stars" value="2" />
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-            </label>
-            <label>
-              <input type="radio" name="stars" value="3" />
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-              <span class="icon">★</span>   
-            </label>
-            <label>
-              <input type="radio" name="stars" value="4" />
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-            </label>
-            <label>
-              <input type="radio" name="stars" value="5" />
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-              <span class="icon">★</span>
-            </label>
-          </div>
-
           <div>
-            <button type="submit"> Add your climb </button>
+            <label htmlFor="rating">Rating:</label>
+              <select id="rating">
+                <option value="0">Select Rating</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+              </select>
+          </div>
+          <div>
+            <label htmlFor="Description"> Description: {' '} <Required /></label> <br />
+            <textarea id="description" name="description" rows="6" cols="40" placeholder="Write your opinion..."required></textarea>
+          </div>
+          <div>
+            <button type="submit"> Add Climb </button>
+            <Link to={'/'}><button type='button'> Back </button></Link>
+
           </div>
         </form>
       </section>

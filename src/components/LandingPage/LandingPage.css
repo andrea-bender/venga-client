@@ -1,0 +1,44 @@
+@media only screen and (max-width: 500px) {
+.landing-page-top{
+  background-image: url(../../assets/bg1.png);
+  background-size: cover;
+  background-position: center;
+  height:50vh;
+}
+.logo-img{
+  width: 9em;
+  padding: 1em;
+  border-radius: 44px;
+}
+.landing-page{
+  background-color: black;
+  color: white;
+  height: 100vh;
+}
+.landing-page h2{
+  text-align:center;
+}
+.landing-page p{
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+}
+.lp-links {
+  text-align: center;
+  padding-top: .7em;
+  padding-bottom: 2em;
+  background-color: black;
+}
+.lp-links a{
+  text-decoration: none;
+  color: #2be8e8;
+  padding: 1em;
+}
+footer{
+  background-color: black;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-size: .8em;
+}
+}

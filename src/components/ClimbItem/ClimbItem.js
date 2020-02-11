@@ -1,6 +1,6 @@
 import React from 'react';
-import ClimbsContext from '../ClimbsContext';
-import config from '../config';
+import ClimbsContext from '../../contexts/ClimbsContext';
+import config from '../../config';
 import './ClimbItem.css';
 
 function deleteClimbRequest(id, cb) {
@@ -36,7 +36,7 @@ export default function ClimbItem(props) {
               <li>Grade: {props.grade} </li>
               <li>Type:{props.type}</li>
               <li>Description: {props.description}</li>
-              <li>Rating: {props.rating}</li>
+              <li>Rating: {props.rating} Stars</li>
             </ul>
           </div>
 
@@ -45,7 +45,7 @@ export default function ClimbItem(props) {
               onClick={() => {
               deleteClimbRequest(
                 props.id,
-                context.deleteclimb
+                context.deleteClimb
               )
               }}> 
                 Delete Climb

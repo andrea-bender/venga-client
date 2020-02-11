@@ -1,11 +1,11 @@
 import React from 'react';
 import config from './config';
 import { Route } from 'react-router-dom';
-import ClimbsContext from './ClimbsContext';
-import Header from './Header/Header';
-import ClimbList from './ClimbList/ClimbList';
-import AddClimb from './AddClimb/AddClimb';
-
+import ClimbsContext from './contexts/ClimbsContext';
+import ClimbList from './components/ClimbList/ClimbList';
+import ClimbItem from './components/ClimbItem/ClimbItem'
+import AddClimb from './components/AddClimb/AddClimb';
+import LandingPage from './components/LandingPage/LandingPage'
 export default class App extends React.Component {
   
   constructor(props) {
@@ -22,14 +22,14 @@ export default class App extends React.Component {
     })
   };
 
-  addClimb = climb => {
+  AddClimb = climb => {
     this.setState({
       climbs: [ ...this.state.climbs, climb ]
     })
   };
 
   deleteClimb = id => {
-    const newClimb = this.state.climbs.filter(climb => climb.id !== id)
+    const newClimb = this.state.climbs.filter(cl => cl.id !== id)
     this.setState({
       climbs: newClimb
     })
@@ -37,15 +37,15 @@ export default class App extends React.Component {
 
   updateClimb = updatedClimb => {
     this.setState({
-      climbs: this.state.climbs.map(climb =>
-        (climb.id !== updatedClimb.id) ? climb : updatedClimb)
+      climbs: this.state.climbs.map(cl =>
+        (cl.id !== updatedClimb.id) ? cl : updatedClimb)
     })
   };
 
   editClimb = (climbId, climbData) => {
     this.setState({
-      climbs: this.state.climbs.map(climb =>
-        climb.id === Number(climbId) ? {...climb, ...climbData} : climb
+      climbs: this.state.climbs.map(c =>
+        c.id === Number(climbId) ? {...c, ...climbData} : c
       )
     })
   };
@@ -74,7 +74,7 @@ export default class App extends React.Component {
   render() {
     const contextValue = {
       climbs: this.state.climbs,
-      addClimb: this.addClimb,
+      AddClimb: this.AddClimb,
       deleteClimb: this.deleteClimb,
       updatedClimb: this.updatedClimb,
       editClimb: this.editClimb
@@ -82,23 +82,28 @@ export default class App extends React.Component {
     
     return (
       <main className='App'>
-        <header className='App_header'>
-          <Header />
-        </header>
-
-        <h2> Venga <br />
-          A place to save all rock climbs for the community </h2>
 
         <ClimbsContext.Provider value={contextValue}>
 
-          {['/', '/climbs/:id'].map(path =>
-            <Route 
+        <Route 
             exact
-            key={path}
-            path={path}
+            path='/'
+            component={LandingPage}
+          />
+
+          
+          <Route 
+            exact
+            path={'/climbs'}
             component={ClimbList}
             />
-          )}
+
+        <Route 
+            exact
+            path={'/climbs:id'}
+            component={ClimbItem}
+            />
+          
 
           <Route 
             exact

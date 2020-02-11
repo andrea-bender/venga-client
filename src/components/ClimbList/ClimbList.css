@@ -1,0 +1,31 @@
+.ClimbList{
+  background-color: black;
+  color:white;
+  height:fit-content;
+}
+.add-climb{
+  text-decoration: none;
+  color: aqua;
+  text-align: center;
+  font-weight: lighter;
+}
+.climbItem{
+background-color: white;
+color: black;
+border-radius: 10px;
+padding: 1em;
+margin: 1em;
+text-align: center;
+}
+.climb_list{
+  padding:0;
+  padding-bottom:1em;
+}
+.climbItem_info ul{
+  list-style: none;
+  padding:0;
+}
+.climbItem_info li{
+  text-align: left;
+  padding: .5em;
+}
