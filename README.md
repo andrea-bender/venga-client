@@ -17,8 +17,9 @@ Venga is a functional user friendly application for avid climbers that want to c
 ![Landing page](./src/assets/LandingPage.png)
 
 # Add Climb Page
-The add climb form is displayed with various fields for the user to input information about the climb as well as a rating and description of the climb.
 ![Add Climb](./src/assets/AddClimb.png)
+
+The add climb form is displayed with various fields for the user to input information about the climb as well as a rating and description of the climb.
 
 # Climb List Page
 ![Climb List](./src/assets/ClimbList.png)
