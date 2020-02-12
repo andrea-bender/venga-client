@@ -34,9 +34,13 @@ Installing
 Clone the repository and download dependencies.
 
 $ git clone https://github.com/andrea-bender/venga-client.git
+
 $ cd venga-client
+
 $ npm install
+
 Launching
+
 Start the development server.
 
 $ npm run start
