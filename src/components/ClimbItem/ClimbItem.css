@@ -1,7 +1,9 @@
-button.delete{
-  height: 2.5em;
-  background-color: #80808059;
-}
-ul.climb_list{
-  margin-bottom: 0;
+@media only screen and (min-width: 300px) {
+  button.delete{
+    height: 2.5em;
+    background-color: #80808059;
+  }
+  ul.climb_list{
+    margin-bottom: 0;
+  }
 }

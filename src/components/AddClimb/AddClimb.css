@@ -1,38 +1,74 @@
+form{
+  margin-left:auto;
+  margin-right: auto;
+}
 
-.AddClimb{
-  background-color: black;
-  color: white;
-  height: 100vh;
-  font-weight: 600;
-}
-.AddClimb h3{
+ @media only screen and (min-width: 300px) {
+  .AddClimb{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    font-weight: 600;
+  }
+  .AddClimb h3{
+    text-align: center;
+  }
+  .add-climb-top .logo-img{
+    width: 10em;
+  }
+  .AddClimb_form{
+  background-image: url(../../assets/bg3.jpeg); 
+  background-position: center; 
+  background-size: cover;
+  height: 70vh;
+  border-radius: 2px;
   text-align: center;
+  }
+  .AddClimb_form div{
+    padding-bottom: 1em;
+  }
+  .AddClimb_form select{
+    background-color: white;
+    height:2em
+  }
+  .AddClimb_form label{
+    padding-right: .5em
+  }
+  .AddClimb_form button{
+    background-color: white;
+    padding:.5em;
+    margin-left: 1em;
+    width: 7em;
+  }
 }
-.add-climb-top .logo-img{
-  width: 10em;
+@media only screen and (min-width: 750px) {
+  .add-climb-top .logo-img {
+      width: 21em;
+  }
+  .AddClimb h3 {
+    font-size: 3em;
+  }
+  .AddClimb_form label{
+    font-size: 2.2em;
+  }
+  .AddClimb_form input{
+    font-size: 1.5em;
+  }
+  .AddClimb_form textarea{
+    font-size: 1.5em;
+  }
+  
 }
-.AddClimb_form{
-background-image: url(../../assets/bg3.jpeg); 
-background-position: center; 
-background-size: cover;
-height: 70vh;
-margin: 1em;
-border-radius: 2px;
-text-align: center;
-}
-.AddClimb_form div{
-  padding-bottom: 1em;
-}
-.AddClimb_form select{
-  background-color: white;
-  height:2em
-}
-.AddClimb_form label{
-  padding-right: .5em
-}
-.AddClimb_form button{
-  background-color: white;
-  padding:.5em;
-  margin-left: 1em;
-  width: 7em;
+@media only screen and (min-width: 1024px) {
+  .AddClimb_form label {
+    font-size: 1.2em;
+  }
+  textarea {
+    height: 6em;
+    width: 14em;
+  }
+  .AddClimb_form button:hover{
+    cursor: pointer;
+    color: rgb(0, 173, 173);
+  }
 }

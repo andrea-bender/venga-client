@@ -1,44 +1,75 @@
-@media only screen and (max-width: 500px) {
-.landing-page-top{
-  background-image: url(../../assets/bg1.png);
-  background-size: cover;
-  background-position: center;
-  height:50vh;
+
+@media only screen and (min-width: 300px) {
+  .landing-page-top{
+    background-image: url(../../assets/bg1.png);
+    background-size: cover;
+    background-position: center;
+    height:50vh;
+  }
+  .logo-img{
+    width: 9em;
+    padding: 1em;
+    border-radius: 44px;
+  }
+  .landing-page{
+    background-color: black;
+    color: white;
+    height: 100vh;
+  }
+  .landing-page h2{
+    text-align:center;
+  }
+  .landing-page p{
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+  }
+  .lp-links {
+    text-align: center;
+    padding-top: .7em;
+    padding-bottom: 2em;
+    background-color: black;
+  }
+  .lp-links a{
+    text-decoration: none;
+    color: #2be8e8;
+    padding: 1em;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: .8em;
+  }
 }
-.logo-img{
-  width: 9em;
-  padding: 1em;
-  border-radius: 44px;
+@media only screen and (min-width: 750px) {
+  .logo-img{
+    width: 15em;
+    padding: 1em;
+    border-radius: 44px;
+  }
+  .landing-page h2 {
+    text-align: center;
+    font-size: 3em;
+  }
+  .landing-page p {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .lp-links {
+    text-align: center;
+    padding-top: .7em;
+    padding-bottom: 2em;
+    font-size: 1.5em;
+    background-color: black;
+  }
 }
-.landing-page{
-  background-color: black;
-  color: white;
-  height: 100vh;
-}
-.landing-page h2{
-  text-align:center;
-}
-.landing-page p{
-  padding-left: 1em;
-  padding-right: 1em;
-  text-align: center;
-}
-.lp-links {
-  text-align: center;
-  padding-top: .7em;
-  padding-bottom: 2em;
-  background-color: black;
-}
-.lp-links a{
-  text-decoration: none;
-  color: #2be8e8;
-  padding: 1em;
-}
-footer{
-  background-color: black;
-  color: white;
-  padding: 1em;
-  text-align: center;
-  font-size: .8em;
-}
+@media only screen and (min-width: 1024px) {
+  .lp-links a:hover{
+    cursor: pointer;
+    color: rgb(12, 160, 197);
+  }
 }
