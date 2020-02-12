@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClimbItem component renders climbs by default 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
+exports[`ClimbItem component renders climbs given props 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddClimb component renders the complete form 1`] = `
+<section
+  className="AddClimb"
+>
+  <div
+    className="add-climb-top"
+  >
+    <Link
+      className="logo-img"
+      to="/"
+    >
+      <img
+        alt="venga logo"
+        className="logo-img"
+        src="logo1.png"
+        width="200px"
+      />
+    </Link>
+  </div>
+  <h3>
+     Add a new climb! 
+  </h3>
+  <form
+    className="AddClimb_form"
+    onSubmit={[Function]}
+  >
+    <div>
+      <label
+        htmlFor="Name"
+      >
+        Name: 
+         
+         
+        <Required />
+      </label>
+       
+      <br />
+      <input
+        id="name"
+        name="Name"
+        placeholder="Name of climb"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="Location"
+      >
+        Location: 
+         
+         
+        <Required />
+      </label>
+       
+      <br />
+      <input
+        id="location"
+        name="location"
+        placeholder="Where is it located"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="Grade"
+      >
+        Grade: 
+         
+         
+        <Required />
+      </label>
+       
+      <br />
+      <input
+        id="grade"
+        name="grade"
+        placeholder="Difficulty"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="type"
+      >
+        Type:
+      </label>
+      <select
+        id="type"
+      >
+        <option
+          value="0"
+        >
+          Select Type
+        </option>
+        <option
+          value="Boulder"
+        >
+          Boulder
+        </option>
+        <option
+          value="Sport"
+        >
+          Sport
+        </option>
+        <option
+          value="Traditional"
+        >
+          Traditional
+        </option>
+        <option
+          value="Ice"
+        >
+          Ice
+        </option>
+        <option
+          value="Other"
+        >
+          Other
+        </option>
+      </select>
+    </div>
+    <div>
+      <label
+        htmlFor="rating"
+      >
+        Rating:
+      </label>
+      <select
+        id="rating"
+      >
+        <option
+          value="0"
+        >
+          Select Rating
+        </option>
+        <option
+          value="1"
+        >
+          ★☆☆☆☆
+        </option>
+        <option
+          value="2"
+        >
+          ★★☆☆☆
+        </option>
+        <option
+          value="3"
+        >
+          ★★★☆☆
+        </option>
+        <option
+          value="4"
+        >
+          ★★★★☆
+        </option>
+        <option
+          value="5"
+        >
+          ★★★★★
+        </option>
+      </select>
+    </div>
+    <div>
+      <label
+        htmlFor="Description"
+      >
+         Description: 
+         
+         
+        <Required />
+      </label>
+       
+      <br />
+      <textarea
+        cols="40"
+        id="description"
+        name="description"
+        placeholder="Write your opinion..."
+        required={true}
+        rows="6"
+      />
+    </div>
+    <div>
+      <button
+        type="submit"
+      >
+         Add Climb 
+      </button>
+      <Link
+        to="/"
+      >
+        <button
+          type="button"
+        >
+           Back 
+        </button>
+      </Link>
+    </div>
+  </form>
+</section>
+`;
